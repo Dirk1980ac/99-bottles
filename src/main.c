@@ -17,6 +17,7 @@
 
 void help(void)
 {
+	printf("$s\n\n", PACKAGE_STRING);
 	printf("Available Options:\n\n");
 	printf("	-n <number>	Number of loops.\n");
 	printf("	-d <delay>	Delay betwen the verses in seconds.\n\n");
