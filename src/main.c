@@ -1,8 +1,8 @@
 /*
- *
  * main.c
  * Copyright 2023 Dirk Gottschalk <dirk.gottschalk1980@googlemail.com>
- *
+ * 
+ * SPDX-License-Identifier: GPL-2.0
  */
 
 #ifndef _GNU_SOURCE
