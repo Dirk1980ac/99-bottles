@@ -31,7 +31,7 @@ int main(int argc, char **argv)
 
 	int opt;
 
-	while ((opt = getopt(argc, argv, "n:i:d:hv")) != -1) {
+	while ((opt = getopt(argc, argv, "n:d:hv")) != -1) {
 		switch (opt) {
 		case 'n':
 			num = (int)strtol(optarg, NULL, 10);
@@ -84,7 +84,9 @@ int main(int argc, char **argv)
 			       ((b - 1) > 1) ? "bottles" : "bottle");
 			break;
 		}
-		sleep(sleeptime);
+
+		if (sleeptime > 0)
+			sleep(sleeptime);
 	}
 	return 0;
 }
