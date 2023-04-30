@@ -18,9 +18,9 @@
 void help(void)
 {
 	printf("Available Options:\n\n");
-	printf("-n <number>	Number of Bottles on the wall.\n");
-	printf("-d <delay>	Delay betwen the verses in seconds.\n\n");
-	printf("-h		Show this help.\n\n");
+	printf("	-n <number>	Number of Bottles on the wall.\n");
+	printf("	-d <delay>	Delay betwen the verses in seconds.\n\n");
+	printf("	-h		Show this help.\n\n");
 }
 
 int main(int argc, char **argv)
@@ -31,17 +31,19 @@ int main(int argc, char **argv)
 
 	int opt;
 
-	while ((opt = getopt(argc, argv, "n:i:")) != -1) {
+	while ((opt = getopt(argc, argv, "n:i:d:hv")) != -1) {
 		switch (opt) {
 		case 'n':
 			num = (int)strtol(optarg, NULL, 10);
+			break;
 
 		case 'd':
 			sleeptime = (int)strtol(optarg, NULL, 10);
+			break;
 
 		case 'v':
 			/* Show program version and exit */
-			printf("%s", PACKAGE_STRING);
+			printf("%s\n\n", PACKAGE_STRING);
 			exit(EXIT_SUCCESS);
 			break;
 
@@ -55,6 +57,8 @@ int main(int argc, char **argv)
 			break;
 		}
 	}
+
+	printf("\n");
 
 	for (b = num; b >= 0; b--) {
 		switch (b) {
