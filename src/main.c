@@ -9,7 +9,7 @@
 #define _GNU_SOURCE
 #endif
 
-#include "config.h"
+#include "../config.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -17,10 +17,10 @@
 
 void help(void)
 {
-	printf("$s version %s\n\n", PACKAGE_NAME, PACKAGE_VERSION);
+	printf("%s version %s\n\n", PACKAGE_NAME, PACKAGE_VERSION);
 	printf("Available Options:\n\n");
 	printf("	-n <number>	Number of loops.\n");
-	printf("	-d <delay>	Delay betwen the verses in seconds.\n");
+	printf("	-d <delay>	Delay between the verses in seconds.\n");
 	printf("	-h		Show this help.\n\n");
 }
 
@@ -46,7 +46,7 @@ int main(int argc, char **argv)
 
 		case 'v':
 			/* Show program version and exit */
-			printf("$s version %s\n\n", PACKAGE_NAME,
+			printf("%s version %s\n\n", PACKAGE_NAME,
 			       PACKAGE_VERSION);
 			exit(EXIT_SUCCESS);
 			break;
@@ -94,5 +94,6 @@ int main(int argc, char **argv)
 		}
 		loops--;
 	}
-	return 0;
+	return EXIT_SUCCESS;
 }
+
