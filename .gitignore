@@ -63,6 +63,11 @@ Makefile.in
 /install-sh
 /missing
 /stamp-h1
+Makecache
+build-aux/compile
+build-aux/depcomp
+build-aux/install-sh
+build-aux/missing
 
 # https://www.gnu.org/software/libtool/
 
