@@ -9,7 +9,7 @@
 #define _GNU_SOURCE
 #endif
 
-#include "../config.h"
+#include "99bottles.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -96,4 +96,3 @@ int main(int argc, char **argv)
 	}
 	return EXIT_SUCCESS;
 }
-
