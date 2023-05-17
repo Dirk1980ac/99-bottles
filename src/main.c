@@ -9,7 +9,7 @@
 #define _GNU_SOURCE
 #endif
 
-#include "99bottles.h"
+#include "bottles.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>

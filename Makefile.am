@@ -1,18 +1,22 @@
-AUTOMAKE_OPTIONS = foreign
-
 # Projects subdirectories
 SUBDIRS = src
+EXTRA_DIST = $(top_srcdir)/build-aux/git-version-gen \
+	$(top_srcdir)/autogen.sh
 
-# DOXYGEN SUPPORT
-# include $(top_srcdir)/aminclude.am
 
-# Uncomment if you use Intltool
-# INTLTOOL_FILES = intltool-extract.in \
-#	intltool-merge.in \
-#	intltool-update.in
+ACLOCAL_AMFLAGS = --install -I m4
 
-# ensure the distribution of the doxygen configuration file
-EXTRA_DIST = autogen.sh
+$(top_srcdir)/.version:
+	echo $(VERSION) > $@-t && mv $@-t $@
+dist-hook:
+	echo $(VERSION) > $(distdir)/.tarball-version
+
+dist_doc_DATA = \
+	README.md \
+	COPYING \
+	AUTHORS \
+	INSTALL \
+	NEWS
 
 # Remove doc directory on uninstall
 uninstall-local:

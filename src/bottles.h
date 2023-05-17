@@ -9,9 +9,9 @@
  *
  */
 
-#ifndef 99BOTTLES_H
-#define 99BOTTLES_H
+#ifndef BOTTLES_H
+#define BOTTLES_H
 
-#include "../config.h"
+#include "config.h"
 
-#endif /* 99BOTTLES_H */
+#endif /* BOTTLES_H */

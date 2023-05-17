@@ -15,7 +15,8 @@ AM_CFLAGS =\
 bin_PROGRAMS = 99-bottles
 
 99_bottles_SOURCES = \
-	main.c 
+	main.c \
+	bottles.h
 
 99_bottles_CFLAGS = $(MODNAME_CFLAGS)
 99_bottles_LDADD = $(MODNAME_LIBS)
